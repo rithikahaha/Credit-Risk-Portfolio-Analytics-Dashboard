@@ -3,7 +3,7 @@
 An interactive Power BI dashboard analysing credit risk patterns across a loan portfolio. Built to explore how credit grade, interest rate, and loan volume interact to drive default risk and expected portfolio loss.
 
 ## Dashboard Preview
-![Credit Risk Dashboard](screenshot.png)
+![Credit Risk Dashboard](Dashboard.png)
 
 ## What It Shows
 
