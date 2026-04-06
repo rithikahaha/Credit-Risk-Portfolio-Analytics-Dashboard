@@ -5,35 +5,42 @@ An interactive Power BI dashboard analysing credit risk patterns across a loan p
 ## Dashboard Preview
 ![Credit Risk Dashboard](Dashboard.png)
 
-## What It Shows
+### What is this project?
+Imagine you are a bank manager. You have lent out millions of dollars. Your biggest fear isn't just people not paying you back; it is not knowing **which** groups of people are most likely to fail. 
 
-KPI Cards — 454 total loans, $7.06M total loan amount, 13.40% avg interest rate, 1.54% overall default rate.
+**LendGuard** is an interactive risk audit I built to hunt for patterns in loan defaults. It transforms raw financial data into a strategic map that tells a bank exactly where their money is safe and where it is at high risk.
 
-Default Rate by Credit Grade — bar chart showing default rates across grades A to G. Grade D carries the highest default probability.
+### The Strategic Discovery: Where is the Money at Risk?
+After auditing 454 loans totaling $7.06M, I identified a massive "Risk Gap" in the portfolio:
 
-Total Loan Amount by Grade — Grade C has the largest loan exposure, followed by B and A.
+**The Grade D Danger Zone**
+While Grade A and B loans are stable, **Grade D loans** show the highest default probability. Even though they represent a smaller portion of the total volume, they contribute the most to **Expected Portfolio Loss.**
 
-Default Rate by Risk Category — breakdown across High Risk, Medium Risk, and Low Risk categories.
+**The Interest Rate Trap**
+There is a clear "Breaking Point" where higher interest rates no longer compensate for the risk. My analysis shows that as interest rates cross a certain threshold, the default probability spikes aggressively, leading to a net loss for the bank.
 
-Interest Rate vs Default Probability by Credit Grade — scatter plot showing the relationship between interest rate and default probability per grade.
+**Concentration Risk**
+Grade C carries the largest **Exposure Concentration.** If the economy dips, the bank’s stability relies almost entirely on the performance of this one specific group.
 
-Expected Portfolio Loss by Grade — Grade D and B carry the highest expected losses.
+### How I Measured the Risk
+I used Financial Analytics logic to calculate the **Expected Loss (EL)** for the portfolio:
 
-Interactive Filters — filter the entire dashboard by Credit Grade (A–G) and Risk Category (High / Medium / Low Risk).
+$$Expected Loss = Exposure \times Probability of Default \times Loss Given Default$$
 
-## Key Insight
-Grade D exhibits the highest default probability and expected loss, while Grade C carries the largest exposure concentration. Risk is driven by both probability and loan volume distribution.
+By mapping these variables, I created a **Risk Prioritization Map** that allows managers to see "at a glance" which loan categories need immediate policy changes.
 
-## Dataset
-Sourced from Kaggle. Contains loan-level data including credit grade, loan amount, interest rate, and default status.
+### Tools & Methodology
+* **Power BI & DAX:** I used DAX to create "Self-Healing" measures for Default Rates and Expected Loss.
+* **Data Visualization:** Built with a "Mobile-First" executive layout to ensure a 5-second "Time-to-Insight."
+* **Risk Categorization:** Developed a custom logic to sort loans into High, Medium, and Low risk buckets based on historical default patterns.
 
-## How to Run
-1. Download the `.pbix` file
-2. Open in Power BI Desktop
-3. Use the Credit Grade and Risk Category filters to explore the data
+### Why this matters for a Financial Analyst?
+In banking, data is money. This project proves I can do more than just build charts; I can analyze a portfolio to find **Systemic Risks** and provide the insights needed to protect a bank's capital.
 
-## Built With
-Power BI, DAX
+### How to Explore the Audit
+1. **Download the .pbix file** from this repository.
+2. **Open in Power BI Desktop** to interact with the filters.
+3. **Toggle Credit Grades** to see how the Expected Loss shifts in real-time.
 
 ## Author
 Rithika Harikrishna
