@@ -53,7 +53,7 @@ These custom measures power the "Brain" of the dashboard:
 * **Expected Portfolio Loss:** `Expected Loss = SUMX(Loans, Loans[Loan_Amount] * [Default Rate])`
 
 **3. Business Logic (Categorization)**
-* **Risk Rank:** ```dax
+* **Risk Rank:** DAX
   Risk Rank = SWITCH( TRUE(),
       [Default Rate] > 0.20, "High Risk",
       [Default Rate] > 0.10, "Medium Risk",
