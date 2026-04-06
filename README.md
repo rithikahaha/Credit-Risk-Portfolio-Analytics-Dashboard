@@ -36,7 +36,7 @@ I developed a suite of DAX measures to transform raw loan data into actionable f
 * **Expected Portfolio Loss:** `Expected Loss = SUMX(Loans, Loans[Loan_Amount] * [Default Rate])`
 
 **3. Strategic Categorization (Logic)**
-* **Risk Rank:** ```dax
+* **Risk Rank:** DAX
 Risk Rank = 
 SWITCH( TRUE(),
     [Default Rate] > 0.20, "High Risk",
